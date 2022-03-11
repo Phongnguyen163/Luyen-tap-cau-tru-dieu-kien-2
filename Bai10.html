@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" placeholder="Nhap so dien" id="sd">
+<button onclick="Tinh()">Kiem tra gia</button>
+<h1 id="rs"></h1>
+<script>
+    function Tinh() {
+        let a = document.getElementById('sd');
+        let sodien = a.value;
+        let phi = 0;
+        let phicodinh = 25000;
+        if (sodien > 200){
+            phi = (sodien - 200) * 6000 + 150 * 4000 + 50 * 2000;
+        }
+        else if (sodien > 50){
+            phi += (sodien - 50) * 4000 + 50 * 600;
+        }
+        else {
+            phi += sodien * 2000;
+        }
+        let Tong = phi + phicodinh;
+        document.getElementById('rs').innerHTML = "Giá dien là: " + Tong;
+    }
+</script>
+</body>
+</html>

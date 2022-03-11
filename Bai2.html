@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" placeholder="Nhap do dai" id="dd">
+<button onclick="Chuyen()">Chuyen feet</button>
+<p id="rs"></p>
+<script>
+    function Chuyen() {
+        let m = document.getElementById('dd');
+        let ft = m.value * 3.2808;
+        document.getElementById('rs').innerHTML = "Ket qua la: " + ft;
+    }
+</script>
+</body>
+</html>

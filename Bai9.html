@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" placeholder="Nhập a" id="s1">
+<input type="text" placeholder="Nhập b" id="s2">
+<input type="text" placeholder="Nhập c" id="s3">
+<button onclick="Ktra()">Click</button>
+<p id="H"></p>
+<script>
+    function Ktra() {
+        let a = document.getElementById('s1').value;
+        let b = document.getElementById('s2').value;
+        let c = document.getElementById('s3').value;
+        let A = parseInt(a);
+        let B = parseInt(b);
+        let C = parseInt(c);
+        if (A > 0 && B > 0 && C > 0) {
+            if (A + B > C && A + C > B && B + C > A) {
+                document.getElementById('H').innerHTML = "Đây là tam giác thường";
+            }
+        } else {
+            document.getElementById('H').innerHTML = "Đây không phải là tam giác";
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" placeholder="Nhap nhiet do" id="nd">
+<button onclick="Chuyen()">Chuyen do F</button>
+<p id="rs"></p>
+<script>
+    function Chuyen() {
+        let a = document.getElementById('nd');
+        let F = a.value * 9/5 + 32;
+        document.getElementById('rs').innerHTML = "Ket qua la: " + F;
+    }
+</script>
+</body>
+</html>

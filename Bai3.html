@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" placeholder="Nhap canh a" id="ca">
+<button onclick="Tinh()">Dien tich</button>
+<p id="rs"></p>
+<script>
+    function Tinh() {
+        let a = document.getElementById('ca');
+        let S = a.value * a.value;
+        document.getElementById('rs').innerHTML = "Dien tich hinh vuong la: " + S;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" placeholder="Nhap a" id="hs1">
+<input type="text" placeholder="Nhap b" id="hs2">
+<button onclick="Tinh()">Giai pt</button>
+<p id="rs"></p>
+<script>
+    function Tinh() {
+        let a = document.getElementById('hs1');
+        let b = document.getElementById('hs2');
+        if (+a.value === 0) {
+            if (+b.value === 0) {
+                document.getElementById('rs').innerHTML = "Phuong trinh co vo so nghiem";
+            }
+            else {
+                document.getElementById('rs').innerHTML = "Phuong trinh vo nghiem";
+            }
+        }
+        else {
+            let ng = -b.value/a.value;
+            document.getElementById('rs').innerHTML = "Phuong trinh nghiem duy nhat: " + ng;
+        }
+    }
+</script>
+</body>
+</html>

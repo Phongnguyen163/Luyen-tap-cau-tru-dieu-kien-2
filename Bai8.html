@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" placeholder="Nhap tuoi" id="age">
+<button onclick="Ktra()">Kiem tra</button>
+<p id="rs"></p>
+<script>
+    function Ktra() {
+        let a = document.getElementById('age');
+        if (parseInt(a.value) === +a.value) {
+            if (+a.value >= 0 && +a.value < 120) {
+                document.getElementById('rs').innerHTML = "Day la tuoi cua 1 nguoi ";
+            } else {
+                document.getElementById('rs').innerHTML = "Day khong phia la tuoi cua 1 nguoi ";
+            }
+        } else {
+            document.getElementById('rs').innerHTML = "So nhap khong hop le ";
+        }
+    }
+</script>
+</body>
+</html>

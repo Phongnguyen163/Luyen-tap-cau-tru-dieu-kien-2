@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" placeholder="Nhap a" id="cc">
+<input type="text" placeholder="Nhap b" id="cd">
+<button onclick="Tinh()">Dien tich</button>
+<p id="rs"></p>
+<script>
+    function Tinh() {
+        let a = document.getElementById('cc');
+        let b = document.getElementById('cd');
+        let S = 1 / 2 * a.value * b.value;
+        document.getElementById('rs').innerHTML = "Dien tich hinh tam giac vuong la: " + S;
+    }
+</script>
+</body>
+</html>

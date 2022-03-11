@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" placeholder="Nhap a" id="hs1">
+<input type="text" placeholder="Nhap b" id="hs2">
+<input type="text" placeholder="Nhap c" id="hs3">
+<button onclick="Tinh()">Giai pt</button>
+<p id="rs"></p>
+<script>
+    function Tinh() {
+        let a = document.getElementById('hs1');
+        let b = document.getElementById('hs2');
+        let c = document.getElementById('hs3');
+
+        if (+a.value === 0) {
+            if (+b.value === 0) {
+                if (+c.value === 0) {
+                    document.getElementById('rs').innerHTML = "Phuong trinh co vo so nghiem";
+                } else {
+                    document.getElementById('rs').innerHTML = "Phuong trinh vo nghiem";
+                }
+            }
+            else {
+                let ng = -c.value / b.value;
+                document.getElementById('rs').innerHTML = "Phuong trinh co nghiem duy nhat: " + ng;
+            }
+        }
+        else {
+            let delta = b.value * b.value - 4 * a.value * c.value;
+            if (delta === 0) {
+                let ng = -b.value / (2 * a.value)
+                document.getElementById('rs').innerHTML = "Phuong trinh nghiem duy nhat: " + ng;
+            }
+            if (delta < 0) {
+                document.getElementById('rs').innerHTML = "Phuong trinh vo nghiem";
+            }
+            if (delta > 0) {
+                let ng1 =(-b.value + Math.sqrt(delta))/(2*a.value);
+                let ng2 =(-b.value - Math.sqrt(delta))/(2*a.value);
+                document.getElementById('rs').innerHTML = "Phuong trinh co 2 nghiem: " + ng1 + " va " + ng2;
+            }
+        }
+    }
+</script>
+</body>
+</html>
